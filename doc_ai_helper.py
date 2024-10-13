@@ -61,7 +61,7 @@ if st.session_state.qa_model is None or st.session_state.embedding_model is None
 
 if st.session_state.docs is None:
     with st.spinner("Fetching documentation..."):
-        st.session_state.docs = fetch_docs("https://docs.python.org/3/library/")
+        st.session_state.docs = fetch_docs("https://community.kissflow.com/category/documentation-section/")
         processed_docs = [preprocess(doc) for doc in st.session_state.docs.values()]
         st.session_state.embeddings = st.session_state.embedding_model.encode(processed_docs)
 
