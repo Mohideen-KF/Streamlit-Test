@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
-st.set_page_config(page_title="Documentation AI Helper")
+st.set_page_config(page_title="KF Documentation AI Helper")
 
 # Initialize session state
 if 'docs' not in st.session_state:
@@ -66,7 +66,7 @@ if st.session_state.docs is None:
         st.session_state.embeddings = st.session_state.embedding_model.encode(processed_docs)
 
 # Get user input
-user_input = st.text_input("Ask a question about Python:")
+user_input = st.text_input("Ask a question about Kissflow:")
 
 if user_input:
     with st.spinner("Generating response..."):
