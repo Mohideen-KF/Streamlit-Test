@@ -8,6 +8,8 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
+st.set_page_config(page_title="Documentation AI Helper")
+
 # Initialize session state
 if 'docs' not in st.session_state:
     st.session_state.docs = None
@@ -83,7 +85,3 @@ if user_input:
         # Display source document
         with st.expander("Source Document"):
             st.write(most_similar_doc)
-
-# Run the Streamlit app
-if __name__ == "__main__":
-    st.set_page_config(page_title="Documentation AI Helper")
